@@ -1527,8 +1527,6 @@ iframe {
 }
 
 /* ---------------------------------location part end--------------------------------- */
-#privacy_part {}
-
 .privacy_heading h2 {
     font: 600 32px var(--open-sans);
     color: #fff;
