@@ -58,7 +58,7 @@ html {
 /* ----------------------common css end----------------------- */
 /* ======================css veriable part start==================== */
 :root {
-    --Brand-color: #430A5D;
+    --brand-color: #b94bec;
     --paragrapph-color: #ffffffd4;
     --poppins: "Poppins", sans-serif;
     --unica: "Unica One", sans-serif;
@@ -98,6 +98,11 @@ html {
 
 .home_subtitle {
     font: italic 400 17px/normal var(--open-sans);
+    margin-bottom: .2em;
+}
+
+.home_subtitle2 {
+    font: italic 400 16px/normal var(--open-sans);
     margin-bottom: 1.5em;
 }
 
@@ -108,8 +113,8 @@ html {
 }
 
 .home_social a:hover {
-    border-color: var(--Brand-color);
-    color: var(--Brand-color);
+    border-color: var(--brand-color);
+    color: var(--brand-color);
 }
 
 .home_nav {
@@ -132,8 +137,8 @@ html {
 }
 
 .home_nav a:hover {
-    border-color: var(--Brand-color);
-    color: var(--Brand-color);
+    border-color: var(--brand-color);
+    color: var(--brand-color);
 }
 
 #home_footer {
@@ -152,8 +157,8 @@ html {
 }
 
 #home_footer p a:hover {
-    color: var(--Brand-color);
-    border-color: var(--Brand-color);
+    color: var(--brand-color);
+    border-color: var(--brand-color);
 }
 
 /* ---------------------------access markup end------------------------- */
@@ -162,7 +167,7 @@ html {
 .background_color {
     margin: 0;
     height: 100vh;
-    background: linear-gradient(270deg, #6a0dad, #6e0dd4, #8c0de0, #8c0dd4, #9400d3, #c71585, #ee82ee, #dda0dd, #87ceeb);
+    background: linear-gradient(270deg, #6a0dad, #6e0dd4, #8c0de0, #8c0dd4, #9400d3, #b94bec, #ee82ee, #8c0de0, #6e0dd4);
     background-size: 400% 400%;
     animation: gradientAnimation 30s ease infinite;
 }
@@ -531,7 +536,7 @@ html {
     height: 2px;
     bottom: -3px;
     right: 0%;
-    background: var(--Brand-color);
+    background: var(--brand-color);
     transition: all linear .3s;
     opacity: 0;
     visibility: hidden;
@@ -655,7 +660,7 @@ html {
     transition: all linear .3s;
 }
 .mission_overplay:hover {
-    border-color: var(--Brand-color);
+    border-color: var(--brand-color);
 }
 
 .mission_item picture img {
@@ -687,7 +692,7 @@ html {
 
 .mission_item_read {
     font: 600 14px var(--poppins);
-    color: var(--Brand-color);
+    color: var(--brand-color);
     transition: all linear .3s;
 }
 
@@ -718,7 +723,7 @@ html {
     color: #fff;
 }
 .teaming_heading h2 span{
-    color: var(--Brand-color);
+    color: var(--brand-color);
 }
 .teaming_heading h3{
     font: 400 16px var(--poppins);
@@ -797,7 +802,7 @@ html {
 .footer_social_icon a:hover {
     transform: translateY(-5px);
     background: #fff;
-    color: var(--Brand-color);
+    color: var(--brand-color);
 }
 
 .footer_list_head {
@@ -839,7 +844,7 @@ html {
     height: 2px;
     bottom: -3px;
     right: 0%;
-    background: var(--Brand-color);
+    background: var(--brand-color);
     transition: all linear .3s;
     opacity: 0;
     visibility: hidden;
@@ -869,7 +874,7 @@ html {
     height: 2px;
     bottom: -3px;
     right: 0%;
-    background: var(--Brand-color);
+    background: var(--brand-color);
     transition: all linear .3s;
     opacity: 0;
     visibility: hidden;
@@ -939,7 +944,7 @@ html {
 
 .about_us_service_list_text:hover {
     transform: translateX(10px);
-    color: var(--Brand-color);
+    color: var(--brand-color);
 }
 
 .about_us_service_list_text span {
@@ -1342,7 +1347,7 @@ html {
 
 .contact_address {
     padding: 30px 30px;
-    background: var(--Brand-color);
+    background: var(--brand-color);
     border-radius: 12px;
     transition: all linear .3s;
 }
@@ -1364,7 +1369,7 @@ html {
 }
 
 .contact_address:hover .contact_info_address_icon i {
-    color: var(--Brand-color);
+    color: var(--brand-color);
 }
 
 .contact_info_address_head h3 {
@@ -1397,7 +1402,7 @@ html {
 .contact_info_iconpart a {
     width: 45px;
     height: 45px;
-    background: var(--Brand-color);
+    background: var(--brand-color);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -1409,7 +1414,7 @@ html {
 .contact_info_iconpart a:hover {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-    color: var(--Brand-color);
+    color: var(--brand-color);
 }
 
 .contact_title_head {
@@ -1449,7 +1454,7 @@ html {
     color: #fff;
     width: 100%;
     padding: 14px 14px 16px 14px;
-    background: var(--Brand-color);
+    background: var(--brand-color);
     border-radius: 6px;
     border: none;
     transition: all linear .3s;
@@ -1463,7 +1468,7 @@ html {
 #messase_box {
     width: 100%;
     height: 180px;
-    background: var(--Brand-color);
+    background: var(--brand-color);
     font: 400 16px var(--poppins);
     color: #fff;
     resize: none;
@@ -1479,7 +1484,7 @@ html {
     width: 100%;
     height: 55px;
     border-radius: 6px;
-    background: var(--Brand-color);
+    background: var(--brand-color);
     font: 400 16px var(--poppins);
     color: #fff;
     display: flex;
@@ -1541,7 +1546,7 @@ iframe {
 }
 
 .privacy_heading h4 span a {
-    color: var(--Brand-color);
+    color: var(--brand-color);
 }
 
 .privacy_heading h5 {
