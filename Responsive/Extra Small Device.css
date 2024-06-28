@@ -1,0 +1,348 @@
+@media (min-width: 0px) and (max-width: 575.98px) {
+/* =================================home page start============================ */
+/* ============================solar system part start============================= */
+.solar_system {
+    width: 320px !important;
+    height: 100%;
+	margin-top: 120px;
+    overflow: hidden;
+}
+.sun_parrent .sun {
+    width: 35px;
+    height: 35px;
+}
+.sun_animatino{
+    display: none;
+}
+.sun_icon{
+    font-size: 17px;
+}
+
+.orbit:nth-child(2) {
+    width: 60px;
+    height: 60px;
+}
+.orbit:nth-child(3) {
+    width: 90px;
+    height: 90px;
+}
+.orbit:nth-child(4) {
+    width: 120px;
+    height: 120px;
+}
+.orbit:nth-child(5) {
+    width: 155px;
+    height: 155px;
+}
+.orbit:nth-child(6) {
+    width: 187px;
+    height: 187px;
+}
+.orbit:nth-child(7) {
+    width: 225px;
+    height: 225px;
+}
+.orbit:nth-child(8) {
+    width: 265px;
+    height: 265px;
+}
+.orbit:nth-child(9) {
+    width: 305px;
+    height: 305px;
+}
+.planet_1 {
+    top: 40px;
+
+}
+.planet_2 {
+    top: 11px;
+    left: -4%;
+}
+.planet_3 {
+    top: -9px;
+    left: 21%;
+}
+.planet_4 {
+    top: 52%;
+    left: -6%;
+}
+.planet_5 {
+    top: 19%;
+    left: 0.2%;
+}
+.planet_6 {
+    top: -3%;
+    left: 26%;
+}
+.planet_7 {
+    top: 31%;
+    left: -3%;
+}
+.planet_8 {
+    top: 52%;
+    left: -2.3%;
+}
+.planet_1 img{
+    width: 15px;
+    height: 15px;
+}
+.planet_2 img{
+    width: 15px;
+    height: 15px;
+}
+.planet_3 img{
+    width: 20px;
+    height: 20px;
+}
+.planet_4 img{
+    width: 25px;
+    height: 25px;
+}
+.planet_5 img{
+    width: 25px;
+    height: 25px;
+}
+.planet_6 img{
+    width: 27px;
+    height: 27px;
+}
+.planet_7 img {
+    width: 25px;
+    height: 16px;
+}
+.planet_8 img {
+    width: 17px;
+    height: 17px;
+}
+/* ----------------------------------solar system part end--------------------------- */
+/* ==============================menu part start=============================== */
+.menu_bar .menu_list {
+    gap: 15px !important;
+}
+
+.navbar-collapse {
+    border-radius: 10px;
+    padding: 25px 0 25px;
+    margin-top: 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+.menu_fixed .navbar_nav {
+    background: transparent;
+    backdrop-filter: none;
+}
+.menu_fixed .nav_link::after{
+    display: block;
+}
+.navbar_logo {
+	width: 56px;
+	height: 46px;
+}
+.dropdown-menu {
+    text-align: center;
+}
+.navbar-toggler {
+    border: 2px solid #ffffff;
+    padding: 5px 13px;
+}
+
+.navbar-toggler span i {
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar_nav {
+	flex-direction: column;
+	row-gap: 20px;
+}
+.navbar_btn {
+    margin: 0% auto;
+	margin-top: 30px;
+}
+/* ---------------------------------menu part end------------------------------ */
+/* ===============================banner part start================================ */
+.banner_title {
+	font: 700 28px/normal var(--open-sans);
+}
+#banner_part {
+	padding: 150px 0 0;
+}
+#mission{
+    padding: 80px 0;
+}
+.mission_title {
+	font: 700 26px var(--open-sans);
+	margin-bottom: 50px;
+}
+.footer_list_head {
+	margin: 40px 0 20px;
+	font: 600 22px var(--poppins);
+}
+.footer_list {
+	row-gap: 8px;
+}
+.footer_item .footer_page_link {
+	font: 500 16px var(--poppins);
+}
+/* -----------------------------------banner part end--------------------------------- */
+/* --------------------------------home page end------------------------------- */
+/* =================================about page start============================ */
+/* =================================aboutus part start============================ */
+.about_us_banner .banner_title {
+	font: 700 25px/normal var(--open-sans);
+}
+.about_us_banner .banner_summery {
+	font: 400 12px/normal var(--poppins);
+}
+#about_us{
+    padding: 80px 0;
+}
+.about_us_img_two, .about_us_img_three{
+    display: none;
+}
+.about_us_heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about_us_head {
+	font: 500 18px/normal var(--open-sans);
+	text-align: center;
+}
+.about_us_title {
+	font: 700 28px var(--open-sans);
+	text-align: center;
+    margin: 12px 0 25px;
+}
+.about_us_summery {
+	font: 400 14px var(--poppins);
+    text-align: center;
+}
+.about_us_service_list {
+	row-gap: 12px;
+}
+.about_us_service_list_item {
+	width: 50%;
+}
+.about_us_service_list_text {
+	font: 400 14px var(--poppins);
+}
+.about_us_service_btn {
+	width: 160px;
+	height: 50px;
+	font: 400 15px/normal var(--poppins);
+    margin: 0% auto;
+    margin-top: 50px;
+}
+#faq_part {
+	padding: 20px 0;
+}
+.faq_part_img picture img {
+	display: none;
+}
+.faq_part_name {
+	font: 400 14px var(--poppins);
+	width: 70px;
+	height: 35px;
+	margin: 0 auto;
+}
+.faq_part_title {
+	font: 700 26px/normal var(--open-sans);
+	text-align: center;
+}
+.faq_part_summery {
+	font: 400 16px var(--poppins);
+	text-align: center;
+}
+.accordion-button {
+	font-size: 14px;
+}
+#ourMission {
+	padding: 0 0 40px;
+}
+.our_mission_scnd_row{
+    flex-wrap: wrap-reverse;
+}
+.ourMission_img picture img {
+    height: 100% !important;
+    margin-bottom: 20px;
+}
+.first_ourMission_summery, .scnd_ourMission_summery {
+	font: 400 14px/normal var(--poppins);
+	text-align: center;
+}
+.our_mission_scnd_row .ourMission_img picture img {
+    margin-bottom: 0px;
+}
+.team_part_name {
+	font: 400 14px var(--poppins);
+	width: 120px;
+	height: 38px;
+}
+.team_part_title {
+	font: 700 23px/normal var(--open-sans);
+	margin: 25px 0 20px;
+}
+.team_part_summery {
+	font: 400 14px var(--poppins);
+}
+.team_part_button{
+    margin-top: 35px;
+    row-gap: 15px;
+}
+.team_part_btn {
+	width: 150px;
+	height: 50px;
+	font: 400 14px var(--poppins);
+}
+/* --------------------------------aboutus part end------------------------------- */
+/* --------------------------------about page end------------------------------- */
+/* ===============================about part text start============================ */
+.blog_page_banner .banner_title {
+    font-size: 28px;
+}
+.blog_page_banner .banner_summery {
+    font-size: 14px;
+}
+#blog_part{
+    padding: 60px 0;
+}
+.blog_summery {
+    font: 700 30px var(--open-sans);
+}
+.blog_part_overplay_row {
+	margin-top: 50px;
+}
+.about_part_info a {
+    font: 400 12px var(--poppins);
+}
+.blog_part_item {
+    padding: 20px 15px;
+}
+.blog_part_item_summery {
+    font: 600 18px var(--open-sans);
+    margin: 12px 0 15px;
+}
+#blog_info {
+    padding: 0px 0;
+}
+.cyber_secourity_common::after {
+display: none;
+}
+.cyber_secourity_common::before {
+    display: none;
+}
+.blog_info_text_headTwo {
+    margin-bottom: 32px;
+}
+.cyber_secourity_common {
+    text-align: center;
+}
+/* -----------------------------about part text end----------------------------- */
+
+}
