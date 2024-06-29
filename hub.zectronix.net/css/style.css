@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Common CSS Start */
+* {
+    padding: 0%;
+    margin: 0%;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+div,
+img,
+span,
+a {
+    padding: 0%;
+    margin: 0%;
+    outline: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.feather {
+    display: inline-block;
+    vertical-align: -.125em;
+    width: 1em;
+    height: 1em;
+}
+
+/* Common CSS End */
+
+/* CSS Variables Start */
+:root {
+    --zectronix-color: #b94bec;
+    --unica: "Unica One", sans-serif;
+    --open-sans: "Open Sans", sans-serif;
+}
+
+/* CSS Variables End */
+
+/* Hub Start */
+#main_hub {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 93%;
+    margin: auto;
+    font-size: 1.5rem;
+}
+
+#hub_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+
+}
+
+.hub_heading {
+    text-align: center;
+}
+
+.hub_title {
+    font: 700 38px/61px var(--unica);
+    color: rgb(0, 0, 0);
+}
+
+.hub_subtitle {
+    font: italic 400 17px/normal var(--open-sans);
+    margin-bottom: .2em;
+}
+
+.hub_subtitle2 {
+    font: italic 400 16px/normal var(--open-sans);
+    margin-bottom: 1.5em;
+}
+
+.hub_social a {
+    margin: 0 .2em;
+    color: #000;
+    border-bottom: 3px solid #fff;
+}
+
+.hub_social a:hover {
+    border-color: var(--zectronix-color);
+    color: var(--zectronix-color);
+}
+
+.hub_nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hub_nav a {
+    width: 100%;
+    font: 400 24px/38px var(--open-sans);
+    color: rgb(51, 51, 51);
+    margin-top: .5em;
+    position: relative;
+    text-align: center;
+    border-bottom: 3px solid #ffff;
+    transition: all linear .3s;
+}
+
+.hub_nav a:hover {
+    border-color: var(--zectronix-color);
+    color: var(--zectronix-color);
+}
+
+#hub_footer {
+    text-align: center;
+    font-size: .6em;
+    line-height: normal;
+    font-family: var(--open-sans);
+    opacity: .6;
+    margin-bottom: 10px;
+}
+
+#hub_footer p a {
+    color: #000;
+    border-bottom: 3px solid #fff;
+    transition: all linear .2s;
+}
+
+#hub_footer p a:hover {
+    color: var(--zectronix-color);
+    border-color: var(--zectronix-color);
+}
+
+/* Hub End */
