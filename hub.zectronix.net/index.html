@@ -18,6 +18,11 @@
                     <h2 class="hub_subtitle">Cybersecurity Simplified</h2>
                     <h2 class="hub_subtitle2">Coming soon</h2>
                 </div>
+                <!-- <div class="hub_nav">
+                    <a class="nav_hub_link" href="home.html">Home</a>
+                    <a class="nav_about_link" href="about.html">About</a>
+                    <a class="nav_blog_link" href="blog.html">Blog</a>
+                </div> -->
                 <div class="hub_social">
                     <a href="https://x.com/zectronix">
                         <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="33" height="33"
@@ -32,28 +37,29 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="33" height="33"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            <path 
+                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
                             </path>
                             <rect x="2" y="9" width="4" height="12"></rect>
                             <circle cx="4" cy="4" r="2"></circle>
                         </svg>
                     </a>
                 </div>
-                <!-- <div class="hub_nav">
-                    <a class="nav_hub_link" href="home.html">Home</a>
-                    <a class="nav_about_link" href="about.html">About</a>
-                    <a class="nav_blog_link" href="blog.html">Blog</a>
-                </div> -->
             </div>
             <div id="hub_footer">
                 <p> 2024 - Zectronix </p>
             </div>
         </div>
     </div>
-    <audio loop autoplay>
-        <source src="audio/runaway.mp3" type="audio/mp3" />
-        <source src="audio/runaway.mpeg" type="audio/mpeg" />
+
+    <audio loop autoplay id="music">
+        <source src="audio/runaway.mp3" type="audio/mp3"/>
+        <source src="audio/runaway.mpeg" type="audio/mpeg"/>
     </audio>
+    <script>
+        var audio = document.getElementById("music");
+        audio.volume = 0.05;
+    </script>
 </body>
 
 </html>
