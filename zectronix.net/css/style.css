@@ -73,7 +73,7 @@ html {
     height: 100vh;
     background: linear-gradient(270deg, #6a0dad, #6e0dd4, #8c0de0, #8c0dd4, #9400d3, #c71585, #ee82ee, #dda0dd, #87ceeb);
     background-size: 400% 400%;
-    animation: gradientAnimation 30s ease infinite;
+    animation: gradientAnimation 100s linear infinite;
 }
 
 @keyframes gradientAnimation {
