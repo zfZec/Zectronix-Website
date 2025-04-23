@@ -1,77 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
-    <meta name="description" content="Zectronix Hub - Cybersecurity Simplified. Coming soon.">
-    <meta name="author" content="Zectronix">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com; img-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests;">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="preload" href="css/style.css" as="style">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unica+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" integrity="sha512-M+2RfiDKJiWCy7zm7Mm957Bz/nNYTKIIQoKjtHvaT9ZVyar1530kioZJMy9VGdaFvMDqPyILy4xSzc4vqBzTTw==" crossorigin="anonymous">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Zectronix Hub</title>
+  <!-- Meta and Security Headers -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com; script-src 'self'; img-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests;">
+  
+  <!-- General Meta Tags -->
+  <meta name="description" content="Zectronix Hub - Cybersecurity Simplified. Coming soon.">
+  <meta name="author" content="Zectronix">
+  
+  <!-- Open Graph and Twitter Card -->
+  <meta property="og:title" content="Zectronix Hub - Cybersecurity Simplified">
+  <meta property="og:description" content="Zectronix Hub, coming soon to simplify your cybersecurity needs.">
+  <meta property="og:image" content="https://zectronix.net/images/og-image.jpg">
+  <meta property="og:url" content="https://zectronix.net/hub">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Fonts and Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unica+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" integrity="sha512-M+2RfiDKJiWCy7zm7Mm957Bz/nNYTKIIQoKjtHvaT9ZVyar1530kioZJMy9VGdaFvMDqPyILy4xSzc4vqBzTTw==" crossorigin="anonymous">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <title>Zectronix Hub</title>
 </head>
 <body>
-    <a href="#main_hub" class="skip-link" aria-label="Skip to main content">Skip to content</a>
-    <div class="preloader">
-        <div class="spinner"></div>
-    </div>
-    <div class="container">
-        <div id="main_hub" role="main">
-            <div id="hub_center">
-                <div class="hub_heading">
-                    <h1 class="hub_title">Zectronix Hub</h1>
-                    <h2 class="hub_subtitle">Cybersecurity Simplified</h2>
-                    <h3 class="hub_subtitle2">Coming Soon</h3>
-                </div>
-                <div class="hub_countdown" aria-live="polite">
-                    <span id="days">00</span> Days
-                    <span id="hours">00</span> Hours
-                    <span id="minutes">00</span> Minutes
-                    <span id="seconds">00</span> Seconds
-                    <noscript>Launching June 1, 2025</noscript>
-                </div>
-                <div class="hub_teaser">Securing your digital future.</div>
-                <!-- <div class="hub_nav">
-                    <a class="nav_hub_link" href="home.html" aria-label="Visit Home page">Home</a>
-                    <a class="nav_about_link" href="about.html" aria-label="Learn more about Zectronix">About</a>
-                    <a class="nav_blog_link" href="blog.html" aria-label="Read our blog">Blog</a>
-                </div> -->
-                <div class="hub_social" aria-label="Social media links">
-                    <a href="https://x.com/zectronix" aria-label="Follow Zectronix on X">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M18 6 6 18M6 6l12 12"></path>
-                        </svg>
-                    </a>
-                    <a href="https://instagram.com/zectronix_cyber" aria-label="Follow Zectronix on Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <circle cx="12" cy="12" r="4"></circle>
-                            <circle cx="18" cy="6" r="1"></circle>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <footer id="hub_footer">
-                <p>© 2024 - <a href="https://zectronix.net" aria-label="Zectronix homepage">Zectronix</a></p>
-            </footer>
+  <!-- Particle Canvas Background -->
+  <canvas id="particle-canvas"></canvas>
+  
+  <!-- Accessibility Skip Link -->
+  <a href="#main_hub" class="skip-link" aria-label="Skip to main content">Skip to content</a>
+  
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="spinner"></div>
+  </div>
+  
+  <!-- Main Content -->
+  <div class="container" role="main">
+    <div id="main_hub">
+      <div id="hub_center">
+        <div class="hub_heading">
+          <h1 class="hub_title">Zectronix Hub</h1>
+          <h2 class="hub_subtitle">Cybersecurity Simplified</h2>
+          <h3 class="hub_subtitle2">Coming Soon</h3>
         </div>
+        <div class="hub_countdown" aria-live="polite">
+          <span id="days">00</span> Days
+          <span id="hours">00</span> Hours
+          <span id="minutes">00</span> Minutes
+          <span id="seconds">00</span> Seconds
+          <noscript>Launching June 1, 2025</noscript>
+        </div>
+        <!-- <div class="hub_nav">
+          <a class="nav_hub_link" href="home.html" aria-label="Visit Home page">Home</a>
+          <a class="nav_about_link" href="about.html" aria-label="Learn more about Zectronix">About</a>
+          <a class="nav_blog_link" href="blog.html" aria-label="Read our blog">Blog</a>
+        </div> -->
+        <div class="hub_teaser">Securing your digital future.</div>
+        <div class="hub_social" aria-label="Social media links">
+          <a href="https://x.com/zectronix" aria-label="Follow Zectronix on X">
+            <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18M6 6l12 12"></path>
+            </svg>
+          </a>
+          <a href="https://instagram.com/zectronix_cyber" aria-label="Follow Zectronix on Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="18" cy="6" r="1"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Footer -->
+      <footer id="hub_footer">
+        <p>© 2024 - <a href="https://zectronix.net" aria-label="Zectronix homepage">Zectronix</a></p>
+      </footer>
     </div>
-    <div class="audio-controls">
-        <audio id="music" loop>
-            <source src="audio/runaway.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        <button id="audio-toggle" aria-label="Pause background music">Pause Music</button>
-    </div>
-    <script src="js/main.js"></script>
+  </div>
+  
+  <!-- Audio Controls -->
+  <div class="audio-controls">
+    <audio id="music" loop>
+      <source src="audio/runaway.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <button id="audio-toggle" aria-label="Pause background music">Pause Music</button>
+  </div>
+  
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  
+  <!-- No JavaScript Fallback -->
+  <noscript>
+    <style>
+      .preloader { display: none; }
+      #hub_center { opacity: 1; }
+    </style>
+    <p style="text-align: center; color: #555;">
+      JavaScript is disabled. Some features, like the preloader and audio controls, may not work. Please enable JavaScript for the full experience.
+    </p>
+  </noscript>
 </body>
 </html>

@@ -1,21 +1,79 @@
 window.addEventListener('load', () => {
+    const startTime = performance.now();
     const preloader = document.querySelector('.preloader');
     const hubCenter = document.querySelector('#hub_center');
+    const canvas = document.querySelector('#particle-canvas');
+    const ctx = canvas ? canvas.getContext('2d') : null;
+
     if (!preloader || !hubCenter) {
         console.error('Preloader or hub_center element not found');
         return;
     }
 
+    // Particle effects
+    if (canvas && ctx) {
+        let particles = [];
+        const particleCount = 100; // Increased from 50 to 100 for more particles
+
+        function initParticles() {
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    radius: Math.random() * 2 + 1,
+                    vx: Math.random() * 0.5 - 0.25,
+                    vy: Math.random() * 0.5 - 0.25,
+                    opacity: Math.random() * 0.3 + 0.1
+                });
+            }
+            console.log(`Canvas dimensions: ${canvas.width}x${canvas.height}`);
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(185, 75, 236, ${p.opacity})`; // Purple particles
+                ctx.fill();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+
+        canvas.style.visibility = 'hidden'; // Hide until initialized
+        initParticles();
+        canvas.style.visibility = 'visible'; // Show after initialization
+        animateParticles();
+        window.addEventListener('resize', () => {
+            initParticles();
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    } else {
+        console.warn('Canvas or context not found, skipping particle effects');
+    }
+
     // Hide preloader and trigger fade-in animation
     requestAnimationFrame(() => {
         preloader.classList.add('hidden');
-        // Wait for preloader fade-out transition (0.5s) before adding .loaded
+        const loadTime = performance.now() - startTime;
+        console.log(`Preloader hidden after ${loadTime.toFixed(2)}ms`);
         setTimeout(() => {
             hubCenter.classList.add('loaded');
         }, 500);
     });
 });
 
+// Countdown Timer
 function startCountdown(targetDate) {
     const target = new Date(targetDate).getTime();
     if (isNaN(target)) {
@@ -59,6 +117,7 @@ function startCountdown(targetDate) {
 
 startCountdown('2025-06-01T00:00:00');
 
+// Audio Controls
 const audio = document.getElementById('music');
 const toggle = document.getElementById('audio-toggle');
 if (audio && toggle) {
@@ -81,6 +140,7 @@ if (audio && toggle) {
     console.error('Audio or toggle element not found');
 }
 
+// Stylesheet Error Logging
 document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
     link.addEventListener('error', () => {
         console.error(`SRI or resource failure for ${link.href}`);
