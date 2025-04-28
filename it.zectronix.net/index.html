@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta and Security Headers -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=()">
+    <meta name="description" content="Zectronix offers expert cybersecurity solutions, including red teaming, penetration testing, and training to protect your organization from cyber threats.">
+    <meta name="author" content="Zectronix">
+    <!-- Updated CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self'; style-src 'self'; script-src 'self' 'nonce-zectronix2025'; img-src 'self'; object-src 'none'; base-uri 'self'; connect-src 'self'; upgrade-insecure-requests;">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="media/icons/favicon.ico" type="image/x-icon">
+    
+    <!-- Local Fonts and Styles -->
+    <link rel="preload" href="css/fonts.css" as="style">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Zectronix - Expert Cybersecurity Solutions</title>
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <span class="navbar-brand">Zectronix</span>
+            <div class="navbar-nav" id="navbar-nav" role="navigation">
+                <a class="nav-link" href="home.html" aria-label="Visit Home page">Home</a>
+                <a class="nav-link" href="#services" aria-label="Explore our cybersecurity services">Services</a>
+                <a class="nav-link" href="about.html" aria-label="Learn more about Zectronix">About</a>
+                <a class="nav-link" href="contact.html" aria-label="Contact our team">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container" role="main">
+        <div id="main-home">
+            <div id="hero" class="animate-on-scroll">
+                <h1 class="hero-title">Zectronix</h1>
+                <p class="hero-subtitle">Expert Cybersecurity Solutions</p>
+            </div>
+            <section id="services-intro" class="animate-on-scroll">
+                <p class="services-intro-text">At Zectronix, we deliver cutting-edge cybersecurity solutions tailored to protect your organization from evolving threats. Explore our comprehensive services below to strengthen your defenses.</p>
+            </section>
+            <section id="services">
+                <div class="service animate-on-scroll" data-service-id="red-teaming" data-tooltip="Simulates attacks to uncover vulnerabilities" aria-label="Learn more about Red Teaming" tabindex="0">
+                    <img src="media/icons/service-icons/shield-halved-solid.svg" class="service-icon" alt="" aria-hidden="true" loading="lazy">
+                    <h2>Red <span>Teaming</span></h2>
+                    <p>Rigorous testing simulating real-world attacker tactics to identify vulnerabilities.</p>
+                    <a href="#" class="service-cta" aria-label="Learn more about Red Teaming">Learn More</a>
+                </div>
+                <div class="service animate-on-scroll" data-service-id="penetration-testing" data-tooltip="Tests systems for exploitable weaknesses" aria-label="Learn more about Penetration Testing" tabindex="0">
+                    <img src="media/icons/service-icons/magnifying-glass-solid.svg" class="service-icon" alt="" aria-hidden="true" loading="lazy">
+                    <h2>Penetration <span>Testing</span></h2>
+                    <p>Simulated attacks to identify exploitable vulnerabilities before hackers do.</p>
+                    <a href="#" class="service-cta" aria-label="Learn more about Penetration Testing">Learn More</a>
+                </div>
+                <div class="service animate-on-scroll" data-service-id="vulnerability-assessments" data-tooltip="Reviews and mitigates security weaknesses" aria-label="Learn more about Vulnerability Assessments" tabindex="0">
+                    <img src="media/icons/service-icons/wrench-solid.svg" class="service-icon" alt="" aria-hidden="true" loading="lazy">
+                    <h2>Vulnerability <span>Assessments</span></h2>
+                    <p>Systematic reviews to identify and prioritize security weaknesses.</p>
+                    <a href="#" class="service-cta" aria-label="Learn more about Vulnerability Assessments">Learn More</a>
+                </div>
+                <div class="service animate-on-scroll" data-service-id="cyber-risk-management" data-tooltip="Manages cyber threats for continuity" aria-label="Learn more about Cyber Risk Management" tabindex="0">
+                    <img src="media/icons/service-icons/chart-line-solid.svg" class="service-icon" alt="" aria-hidden="true" loading="lazy">
+                    <h2>Cyber Risk <span>Management</span></h2>
+                    <p>Identifies, assesses, and mitigates cyber threats to ensure business continuity.</p>
+                    <a href="#" class="service-cta" aria-label="Learn more about Cyber Risk Management">Learn More</a>
+                </div>
+                <div class="service animate-on-scroll" data-service-id="phishing-assessment" data-tooltip="Evaluates phishing susceptibility" aria-label="Learn more about Phishing Assessment" tabindex="0">
+                    <img src="media/icons/service-icons/envelope-solid.svg" class="service-icon" alt="" aria-hidden="true" loading="lazy">
+                    <h2>Phishing <span>Assessment</span></h2>
+                    <p>Simulates phishing attacks to evaluate employee awareness and reduce risks.</p>
+                    <a href="#" class="service-cta" aria-label="Learn more about Phishing Assessment">Learn More</a>
+                </div>
+                <div class="service animate-on-scroll" data-service-id="managed-phishing" data-tooltip="Outsourced phishing simulation service" aria-label="Learn more about Managed Phishing" tabindex="0">
+                    <img src="media/icons/service-icons/lock-solid.svg" class="service-icon" alt="" aria-hidden="true" loading="lazy">
+                    <h2>Managed <span>Phishing</span></h2>
+                    <p>Outsourced phishing simulations to enhance security without internal resources.</p>
+                    <a href="#" class="service-cta" aria-label="Learn more about Managed Phishing">Learn More</a>
+                </div>
+                <div class="service animate-on-scroll" data-service-id="security-training" data-tooltip="Trains employees on threat response" aria-label="Learn more about Security Training" tabindex="0">
+                    <img src="media/icons/service-icons/graduation-cap-solid.svg" class="service-icon" alt="" aria-hidden="true" loading="lazy">
+                    <h2>Security <span>Training</span></h2>
+                    <p>Educates employees to recognize and respond to security threats effectively.</p>
+                    <a href="#" class="service-cta" aria-label="Learn more about Security Training">Learn More</a>
+                </div>
+                <div class="service animate-on-scroll" data-service-id="password-audit" data-tooltip="Assesses password security" aria-label="Learn more about Password Audit" tabindex="0">
+                    <img src="media/icons/service-icons/key-solid.svg" class="service-icon" alt="" aria-hidden="true" loading="lazy">
+                    <h2>Password <span>Audit</span></h2>
+                    <p>Reviews password strength to ensure robust security practices.</p>
+                    <a href="#" class="service-cta" aria-label="Learn more about Password Audit">Learn More</a>
+                </div>
+            </section>
+            <div class="overlay" id="service-overlay">
+                <div class="overlay-content">
+                    <div id="overlay-content-inner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer id="footer">
+        <p>© 2025 <a href="https://zectronix.net" aria-label="Visit Zectronix homepage">Zectronix</a></p>
+        <div class="footer-social">
+            <a href="https://x.com/zectronix" aria-label="Follow Zectronix on X for updates">
+                <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 6 6 18M6 6l12 12"></path>
+                </svg>
+            </a>
+            <a href="https://instagram.com/zectronix_cyber" aria-label="Follow Zectronix on Instagram for cybersecurity insights">
+                <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <circle cx="18" cy="6" r="1"></circle>
+                </svg>
+            </a>
+        </div>
+    </footer>
+    
+    <!-- JavaScript with Nonce -->
+    <script nonce="zectronix2025" src="js/main.js"></script>
+    
+    <!-- No JavaScript Fallback -->
+    <noscript>
+        <style>
+            .preloader { display: none; }
+            #hero, .service { opacity: 1; visibility: visible; transform: none; }
+            .navbar-nav { display: flex; }
+            .animate-on-scroll { opacity: 1; transform: none; }
+        </style>
+        <p style="text-align: center; color: #555;">
+            JavaScript is disabled. Some features, like the service overlay, may not work. Please enable JavaScript for the full experience.
+        </p>
+    </noscript>
+</body>
+</html>
