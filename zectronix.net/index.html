@@ -8,45 +8,30 @@
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
     <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta name="description" content="Zectronix - Expert cybersecurity solutions for detection, response, and training to safeguard your organization from threats.">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=()">
+    <meta name="description" content="Zectronix offers expert cybersecurity solutions, including red teaming, penetration testing, and training to protect your organization from cyber threats.">
     <meta name="author" content="Zectronix">
-    <!-- Stricter CSP with nonce and img-src -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com; script-src 'self' 'nonce-zectronix2025'; img-src 'self'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests;">
+    <!-- Updated CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self'; style-src 'self'; script-src 'self' 'nonce-zectronix2025'; img-src 'self'; object-src 'none'; base-uri 'self'; connect-src 'self'; upgrade-insecure-requests;">
     
-    <!-- Open Graph and Twitter Card -->
-    <meta property="og:title" content="Zectronix - Cybersecurity Solutions">
-    <meta property="og:description" content="Expert cybersecurity solutions for detection, response, and training.">
-    <meta property="og:image" content="https://zectronix.net/images/og-image.jpg">
-    <meta property="og:url" content="https://zectronix.net">
-    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon -->
+    <link rel="icon" href="media/icons/favicon.ico" type="image/x-icon">
     
-    <!-- Fonts and Styles -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Local Fonts and Styles -->
+    <link rel="preload" href="css/fonts.css" as="style">
     <link rel="preload" href="css/style.css" as="style">
-    <!-- Added display=swap -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unica+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" integrity="sha512-M+2RfiDKJiWCy7zm7Mm957Bz/nNYTKIIQoKjtHvaT9ZVyar1530kioZJMy9VGdaFvMDqPyILy4xSzc4vqBzTTw==" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     
-    <title>Zectronix - Cybersecurity Solutions</title>
+    <title>Zectronix - Expert Cybersecurity Solutions</title>
 </head>
 <body>
     <canvas id="particle-canvas"></canvas>
-    <span class="navbar-brand">Zectronix</span>
-    <!-- Accessibility Skip Link -->
-    <a href="#main-home" class="skip-link" aria-label="Skip to main content">Skip to content</a>
-    
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="spinner"></div>
-    </div>
     
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <button class="navbar-toggler" type="button" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="toggler-icon">☰</span>
-            </button>
+            <span class="navbar-brand">Zectronix</span>
             <div class="navbar-nav" id="navbar-nav" role="navigation">
                 <a class="nav-link" href="home.html" aria-label="Visit Home page">Home</a>
                 <a class="nav-link" href="#services" aria-label="Explore our cybersecurity services">Services</a>
@@ -56,45 +41,69 @@
         </div>
     </nav>
     
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    
     <!-- Main Content -->
     <div class="container" role="main">
         <div id="main-home">
-            <div id="hero">
+            <div id="hero" class="animate-on-scroll">
                 <h1 class="hero-title">Zectronix</h1>
                 <p class="hero-subtitle">Expert Cybersecurity Solutions</p>
             </div>
+            <section id="services-intro" class="animate-on-scroll">
+                <p class="services-intro-text">At Zectronix, we deliver cutting-edge cybersecurity solutions tailored to protect your organization from evolving threats. Explore our comprehensive services below to strengthen your defenses.</p>
+            </section>
             <section id="services">
-                <div class="service" data-service-id="red-teaming" data-tooltip="Simulates attacks to uncover vulnerabilities" aria-label="Learn more about Red Teaming" tabindex="0">
+                <div class="service animate-on-scroll" data-service-id="red-teaming" data-tooltip="Simulates attacks to uncover vulnerabilities" aria-label="Learn more about Red Teaming" tabindex="0">
+                    <img src="media/icons/service-icons/shield-halved-solid.svg" class="service-icon" alt="" aria-hidden="true" loading="lazy">
                     <h2>Red <span>Teaming</span></h2>
                     <p>Rigorous testing simulating real-world attacker tactics to identify vulnerabilities.</p>
+                    <a href="#" class="service-cta" aria-label="Learn more about Red Teaming">Learn More</a>
                 </div>
-                <div class="service" data-service-id="penetration-testing" data-tooltip="Tests systems for exploitable weaknesses" aria-label="Learn more about Penetration Testing" tabindex="0">
+                <div class="service animate-on-scroll" data-service-id="penetration-testing" data-tooltip="Tests systems for exploitable weaknesses" aria-label="Learn more about Penetration Testing" tabindex="0">
+                    <img src="media/icons/service-icons/magnifying-glass-solid.svg" class="service-icon" alt="" aria-hidden="true" loading="lazy">
                     <h2>Penetration <span>Testing</span></h2>
                     <p>Simulated attacks to identify exploitable vulnerabilities before hackers do.</p>
+                    <a href="#" class="service-cta" aria-label="Learn more about Penetration Testing">Learn More</a>
                 </div>
-                <div class="service" data-service-id="vulnerability-assessments" data-tooltip="Reviews and mitigates security weaknesses" aria-label="Learn more about Vulnerability Assessments" tabindex="0">
+                <div class="service animate-on-scroll" data-service-id="vulnerability-assessments" data-tooltip="Reviews and mitigates security weaknesses" aria-label="Learn more about Vulnerability Assessments" tabindex="0">
+                    <img src="media/icons/service-icons/wrench-solid.svg" class="service-icon" alt="" aria-hidden="true" loading="lazy">
                     <h2>Vulnerability <span>Assessments</span></h2>
                     <p>Systematic reviews to identify and prioritize security weaknesses.</p>
+                    <a href="#" class="service-cta" aria-label="Learn more about Vulnerability Assessments">Learn More</a>
                 </div>
-                <div class="service" data-service-id="cyber-risk-management" data-tooltip="Manages cyber threats for continuity" aria-label="Learn more about Cyber Risk Management" tabindex="0">
+                <div class="service animate-on-scroll" data-service-id="cyber-risk-management" data-tooltip="Manages cyber threats for continuity" aria-label="Learn more about Cyber Risk Management" tabindex="0">
+                    <img src="media/icons/service-icons/chart-line-solid.svg" class="service-icon" alt="" aria-hidden="true" loading="lazy">
                     <h2>Cyber Risk <span>Management</span></h2>
                     <p>Identifies, assesses, and mitigates cyber threats to ensure business continuity.</p>
+                    <a href="#" class="service-cta" aria-label="Learn more about Cyber Risk Management">Learn More</a>
                 </div>
-                <div class="service" data-service-id="phishing-assessment" data-tooltip="Evaluates phishing susceptibility" aria-label="Learn more about Phishing Assessment" tabindex="0">
+                <div class="service animate-on-scroll" data-service-id="phishing-assessment" data-tooltip="Evaluates phishing susceptibility" aria-label="Learn more about Phishing Assessment" tabindex="0">
+                    <img src="media/icons/service-icons/envelope-solid.svg" class="service-icon" alt="" aria-hidden="true" loading="lazy">
                     <h2>Phishing <span>Assessment</span></h2>
                     <p>Simulates phishing attacks to evaluate employee awareness and reduce risks.</p>
+                    <a href="#" class="service-cta" aria-label="Learn more about Phishing Assessment">Learn More</a>
                 </div>
-                <div class="service" data-service-id="managed-phishing" data-tooltip="Outsourced phishing simulation service" aria-label="Learn more about Managed Phishing" tabindex="0">
+                <div class="service animate-on-scroll" data-service-id="managed-phishing" data-tooltip="Outsourced phishing simulation service" aria-label="Learn more about Managed Phishing" tabindex="0">
+                    <img src="media/icons/service-icons/lock-solid.svg" class="service-icon" alt="" aria-hidden="true" loading="lazy">
                     <h2>Managed <span>Phishing</span></h2>
                     <p>Outsourced phishing simulations to enhance security without internal resources.</p>
+                    <a href="#" class="service-cta" aria-label="Learn more about Managed Phishing">Learn More</a>
                 </div>
-                <div class="service" data-service-id="security-training" data-tooltip="Trains employees on threat response" aria-label="Learn more about Security Training" tabindex="0">
+                <div class="service animate-on-scroll" data-service-id="security-training" data-tooltip="Trains employees on threat response" aria-label="Learn more about Security Training" tabindex="0">
+                    <img src="media/icons/service-icons/graduation-cap-solid.svg" class="service-icon" alt="" aria-hidden="true" loading="lazy">
                     <h2>Security <span>Training</span></h2>
                     <p>Educates employees to recognize and respond to security threats effectively.</p>
+                    <a href="#" class="service-cta" aria-label="Learn more about Security Training">Learn More</a>
                 </div>
-                <div class="service" data-service-id="password-audit" data-tooltip="Assesses password security" aria-label="Learn more about Password Audit" tabindex="0">
+                <div class="service animate-on-scroll" data-service-id="password-audit" data-tooltip="Assesses password security" aria-label="Learn more about Password Audit" tabindex="0">
+                    <img src="media/icons/service-icons/key-solid.svg" class="service-icon" alt="" aria-hidden="true" loading="lazy">
                     <h2>Password <span>Audit</span></h2>
                     <p>Reviews password strength to ensure robust security practices.</p>
+                    <a href="#" class="service-cta" aria-label="Learn more about Password Audit">Learn More</a>
                 </div>
             </section>
             <div class="overlay" id="service-overlay">
@@ -131,8 +140,9 @@
     <noscript>
         <style>
             .preloader { display: none; }
-            #hero, .service { opacity: 1; }
+            #hero, .service { opacity: 1; visibility: visible; transform: none; }
             .navbar-nav { display: flex; }
+            .animate-on-scroll { opacity: 1; transform: none; }
         </style>
         <p style="text-align: center; color: #555;">
             JavaScript is disabled. Some features, like the service overlay, may not work. Please enable JavaScript for the full experience.
