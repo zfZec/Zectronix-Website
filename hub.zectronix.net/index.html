@@ -4,7 +4,13 @@
     <!-- Meta and Security Headers -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Security headers set via .htaccess -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=()">
+    <!-- Note: Static nonce 'zectronix2025' is for local testing; use dynamic nonce in production -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self'; style-src 'self'; script-src 'nonce-zectronix2025'; img-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests;">
     
     <!-- General Meta Tags -->
     <meta name="description" content="Zectronix Hub - Choose between expert IT solutions and cybersecurity services. Coming soon.">
@@ -14,17 +20,17 @@
     <meta property="og:title" content="Zectronix Hub - IT and Cybersecurity Services">
     <meta property="og:description" content="Zectronix Hub, coming soon to provide IT solutions and cybersecurity services.">
     <meta property="og:image" content="https://zectronix.net/images/og-image.jpg">
-    <meta property="og:url" content="https://hub.zectronix.net/">
+    <meta property="og:url" content="https://zectronix.net/hub">
     <meta name="twitter:card" content="summary_large_image">
     
     <!-- Favicon -->
-    <link rel="icon" href="/media/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="media/icons/favicon.ico" type="image/x-icon">
     
     <!-- Local Fonts and Styles -->
-    <link rel="preload" href="/css/fonts.css" as="style">
-    <link rel="preload" href="/css/style.css" as="style">
-    <link rel="stylesheet" href="/css/fonts.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preload" href="css/fonts.css" as="style">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
     
     <title>Zectronix Hub - IT and Cybersecurity Services</title>
 </head>
@@ -60,8 +66,8 @@
                 <!-- Service buttons for IT and Cybersecurity, removed per design update in favor of Coming Soon text -->
                 <!--
                 <section id="services">
-                    <a href="https://it.zectronix.net/" class="service-cta" aria-label="Explore IT Solutions">IT Solutions</a>
-                    <a href="https://zectronix.net/" class="service-cta" aria-label="Explore Cybersecurity Services">Cybersecurity</a>
+                    <a href="https://zectronix.net/it" class="service-cta" aria-label="Explore IT Solutions">IT Solutions</a>
+                    <a href="https://zectronix.net/cybersecurity" class="service-cta" aria-label="Explore Cybersecurity Services">Cybersecurity</a>
                 </section>
                 -->
                 <section id="coming-soon">
@@ -91,7 +97,7 @@
     <!-- Audio Controls -->
     <div class="audio-controls">
         <audio id="music" loop>
-            <source src="/media/audio/runaway.mp3" type="audio/mp3">
+            <source src="media/audio/runaway.mp3" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
         <button id="audio-toggle" aria-label="Pause background music">Pause Music</button>
@@ -99,11 +105,11 @@
     
     <!-- Footer -->
     <footer id="footer">
-        <p>© 2025 - <a href="https://zectronix.net" aria-label="Visit Zectronix homepage">Zectronix</a></p>
+        <p>© 2025 <a href="https://zectronix.net" aria-label="Visit Zectronix homepage">Zectronix</a></p>
     </footer>
     
     <!-- JavaScript with Nonce -->
-    <script nonce="<!--#include virtual='/php/nonce.php' -->" src="/js/main.js"></script>
+    <script nonce="zectronix2025" src="js/main.js"></script>
     
     <!-- No JavaScript Fallback -->
     <noscript>
