@@ -43,10 +43,10 @@ window.onload = async () => {
         const toggle = document.getElementById('audio-toggle');
         const animateElements = document.querySelectorAll('.animate-on-scroll');
 
-        // Particle effects
+        // Particle effects with optimizations
         if (canvas && ctx) {
             let particles = [];
-            const particleCount = 100;
+            const particleCount = 75; // Reduced from 100 to 50 for better performance
             let isAnimating = false;
 
             function initParticles() {
@@ -68,10 +68,7 @@ window.onload = async () => {
             }
 
             function animateParticles() {
-                if (document.hidden || !isAnimating) {
-                    requestAnimationFrame(animateParticles);
-                    return;
-                }
+                if (document.hidden || !isAnimating) return; // Skip animation if hidden or not intersecting
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 particles.forEach(p => {
                     p.x += p.vx;

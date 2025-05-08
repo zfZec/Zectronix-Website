@@ -9,8 +9,8 @@
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=()">
-    <!-- Note: Static nonce 'zectronix2025' is for local testing; use dynamic nonce in production -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self'; style-src 'self'; script-src 'nonce-zectronix2025'; img-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests;">
+    <!-- Updated CSP with hash-based script-src (replace <hash> with actual hash) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self'; style-src 'self'; script-src 'self' 'sha256-0K5qHyabVk5Di42RtoXY/gY2DuvqWGQKJ4IiACnPWFU='; img-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests;">
     
     <!-- General Meta Tags -->
     <meta name="description" content="Zectronix Hub - Choose between expert IT solutions and cybersecurity services. Coming soon.">
@@ -108,16 +108,12 @@
         <p>© 2025 - <a href="https://zectronix.net" aria-label="Visit Zectronix homepage">Zectronix</a></p>
     </footer>
     
-    <!-- JavaScript with Nonce -->
-    <script nonce="zectronix2025" src="js/main.js"></script>
+    <!-- JavaScript without Nonce -->
+    <script src="js/main.js"></script>
     
     <!-- No JavaScript Fallback -->
     <noscript>
-        <style>
-            .preloader { display: none; }
-            #hero, .social-links, section { opacity: 1; visibility: visible; transform: none; }
-            .animate-on-scroll { opacity: 1; transform: none; }
-        </style>
+        <link rel="stylesheet" href="css/noscript.css">
         <p style="text-align: center; color: #555;">
             JavaScript is disabled. Some features, like the countdown timer and audio controls, may not work. Please enable JavaScript for the full experience.
         </p>

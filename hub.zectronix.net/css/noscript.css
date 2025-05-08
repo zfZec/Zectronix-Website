@@ -1,0 +1,17 @@
+/* Noscript Styles */
+.preloader {
+    display: none;
+}
+
+#hero,
+.social-links,
+section {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+.animate-on-scroll {
+    opacity: 1;
+    transform: none;
+}
