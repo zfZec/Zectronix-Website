@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta and Security Headers -->
+    <!-- Meta Tags (security headers removed, handled by .htaccess) -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=()">
-    <!-- Updated CSP with hash-based script-src (replace <hash> with actual hash) -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self'; style-src 'self'; script-src 'self' 'sha256-0K5qHyabVk5Di42RtoXY/gY2DuvqWGQKJ4IiACnPWFU='; img-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests;">
-    
-    <!-- General Meta Tags -->
     <meta name="description" content="Zectronix Hub - Choose between expert IT solutions and cybersecurity services. Coming soon.">
     <meta name="author" content="Zectronix">
     
@@ -108,7 +99,7 @@
         <p>© 2025 - <a href="https://zectronix.net" aria-label="Visit Zectronix homepage">Zectronix</a></p>
     </footer>
     
-    <!-- JavaScript without Nonce -->
+    <!-- JavaScript without Nonce (using hash-based CSP) -->
     <script src="js/main.js"></script>
     
     <!-- No JavaScript Fallback -->
