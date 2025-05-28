@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../media/fonts/open-sans/open-sans-700.woff2') format('woff2'),
-         url('../media/fonts/open-sans/open-sans-700.woff') format('woff');
+    src: url('../media/fonts/open-sans/open-sans-800.woff2') format('woff2'),
+         url('../media/fonts/open-sans/open-sans-800.woff') format('woff');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../media/fonts/open-sans/open-sans-italic.woff2') format('woff2'),
-         url('../media/fonts/open-sans/open-sans-italic.woff') format('woff');
+    src: url('../media/fonts/open-sans/open-sans-300italic.woff2') format('woff2'),
+         url('../media/fonts/open-sans/open-sans-300italic.woff') format('woff');
     font-weight: 400;
     font-style: italic;
     font-display: swap;
