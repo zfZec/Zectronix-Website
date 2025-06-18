@@ -32,7 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    if (preloader) hidePreloader();
+    if (preloader) {
+        // Wait for fonts to load before hiding preloader
+        if (document.fonts) {
+            document.fonts.ready.then(() => {
+                hidePreloader();
+            }).catch((error) => {
+                console.error('Font loading failed:', error.message);
+                hidePreloader(); // Fallback to hide preloader if font loading fails
+            });
+        } else {
+            hidePreloader(); // Fallback if FontFaceSet API is not supported
+        }
+    }
 });
 
 window.onload = async () => {
@@ -175,7 +187,7 @@ window.onload = async () => {
             }, 1000);
         }
 
-        startCountdown('2025-06-01T00:00:00');
+        startCountdown('2025-08-01T00:00:00');
 
         // Audio Controls
         if (audio && toggle) {
