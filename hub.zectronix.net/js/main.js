@@ -3,6 +3,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const hero = document.querySelector('#hero');
     const animateElements = document.querySelectorAll('.animate-on-scroll');
 
+    // Countdown Timer
+    function startCountdown(targetDate) {
+        const target = new Date(targetDate).getTime();
+        if (isNaN(target)) {
+            console.error('Invalid countdown date');
+            const countdownContainer = document.querySelector('.hub-countdown');
+            if (countdownContainer) {
+                countdownContainer.innerHTML = '<span>Invalid Date</span>';
+            }
+            return;
+        }
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const distance = target - now;
+            if (distance < 0) {
+                clearInterval(countdown);
+                const countdownContainer = document.querySelector('.hub-countdown');
+                if (countdownContainer) {
+                    countdownContainer.innerHTML = '<span>Launched!</span>';
+                }
+                return;
+            }
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            const daysElement = document.getElementById('days');
+            const hoursElement = document.getElementById('hours');
+            const minutesElement = document.getElementById('minutes');
+            const secondsElement = document.getElementById('seconds');
+            if (daysElement && hoursElement && minutesElement && secondsElement) {
+                daysElement.textContent = days.toString().padStart(2, '0');
+                hoursElement.textContent = hours.toString().padStart(2, '0');
+                minutesElement.textContent = minutes.toString().padStart(2, '0');
+                secondsElement.textContent = seconds.toString().padStart(2, '0');
+            } else {
+                console.error('Countdown elements not found');
+                clearInterval(countdown);
+            }
+        };
+        // Set initial values immediately
+        updateCountdown();
+        const countdown = setInterval(updateCountdown, 1000);
+    }
+
     // Hide preloader
     const hidePreloader = () => {
         try {
@@ -33,6 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     if (preloader) {
+        // Start countdown immediately
+        startCountdown('2025-08-01T00:00:00');
         // Wait for fonts to load before hiding preloader
         if (document.fonts) {
             document.fonts.ready.then(() => {
@@ -144,50 +191,6 @@ window.onload = async () => {
             console.error('Error in IntersectionObserver:', error.message);
             animateElements.forEach(el => el.classList.add('visible'));
         }
-
-        // Countdown Timer
-        function startCountdown(targetDate) {
-            const target = new Date(targetDate).getTime();
-            if (isNaN(target)) {
-                console.error('Invalid countdown date');
-                const countdownContainer = document.querySelector('.hub-countdown');
-                if (countdownContainer) {
-                    countdownContainer.innerHTML = '<span>Invalid Date</span>';
-                }
-                return;
-            }
-            const countdown = setInterval(() => {
-                const now = new Date().getTime();
-                const distance = target - now;
-                if (distance < 0) {
-                    clearInterval(countdown);
-                    const countdownContainer = document.querySelector('.hub-countdown');
-                    if (countdownContainer) {
-                        countdownContainer.innerHTML = '<span>Launched!</span>';
-                    }
-                    return;
-                }
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                const daysElement = document.getElementById('days');
-                const hoursElement = document.getElementById('hours');
-                const minutesElement = document.getElementById('minutes');
-                const secondsElement = document.getElementById('seconds');
-                if (daysElement && hoursElement && minutesElement && secondsElement) {
-                    daysElement.textContent = days.toString().padStart(2, '0');
-                    hoursElement.textContent = hours.toString().padStart(2, '0');
-                    minutesElement.textContent = minutes.toString().padStart(2, '0');
-                    secondsElement.textContent = seconds.toString().padStart(2, '0');
-                } else {
-                    console.error('Countdown elements not found');
-                    clearInterval(countdown);
-                }
-            }, 1000);
-        }
-
-        startCountdown('2025-08-01T00:00:00');
 
         // Audio Controls
         if (audio && toggle) {
