@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta and Security Headers -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=()">
+    <meta name="description" content="Zectronix Privacy Policy outlining our commitment to protecting your personal information.">
+    <meta name="author" content="Zectronix">
+    <!-- Static CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self'; style-src 'self'; script-src 'self' 'nonce-zectronix2025'; img-src 'self'; object-src 'none'; base-uri 'self'; connect-src 'self'; upgrade-insecure-requests;">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="media/icons/favicon.ico" type="image/x-icon">
+    
+    <!-- Local Fonts and Styles -->
+    <link rel="preload" href="css/fonts.css" as="style">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Zectronix - Privacy Policy</title>
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <span class="navbar-brand">Zectronix</span>
+            <div class="navbar-nav" id="navbar-nav" role="navigation">
+                <a class="nav-link" href="home.html" aria-label="Visit Home page">Home</a>
+                <a class="nav-link" href="home.html#services" aria-label="Explore our cybersecurity services">Services</a>
+                <a class="nav-link" href="about.html" aria-label="Learn more about Zectronix">About</a>
+                <a class="nav-link" href="contact.html" aria-label="Contact our team">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container" role="main">
+        <div id="main-privacy">
+            <div id="hero" class="animate-on-scroll">
+                <h1 class="hero-title">Privacy Policy</h1>
+                <p class="hero-subtitle">Our Commitment to Your Privacy</p>
+            </div>
+            <section class="privacy-policy animate-on-scroll">
+                <h2 class="section-title">Privacy Policy</h2>
+                <h3>Introduction</h3>
+                <p>Welcome to Zectronix. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy or our practices with regards to your personal information, please contact us at <a href="mailto:contact@zectronix.net">contact@zectronix.net</a>.</p>
+                <p>When you visit our website Zectronix and use our services, you trust us with your personal information. We take your privacy very seriously. In this privacy policy, we describe our privacy policy. We seek to explain to you in the clearest way possible what information we collect, how we use it, and what rights you have in relation to it. We hope you take some time to read through it carefully, as it is important. If there are any terms in this privacy policy that you do not agree with, please discontinue use of our Sites and our services.</p>
+                <p>We may update this privacy policy from time to time. The updated version will be indicated by an updated "Revised" date and the updated version will be effective as soon as it is accessible. If we make material changes to this privacy policy, we may notify you either by prominently posting a notice of such changes or by directly sending you a notification.</p>
+            </section>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-links">
+            <p>© 2025 - <a href="https://zectronix.net" aria-label="Visit Zectronix homepage">Zectronix</a></p>
+            <a href="privacy.html" class="footer-link" aria-label="View our Privacy Policy">Privacy Policy</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://x.com/zectronix" aria-label="Follow Zectronix on X for updates">
+                <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 6 6 18M6 6l12 12"></path>
+                </svg>
+            </a>
+            <a href="https://instagram.com/zectronix_cyber" aria-label="Follow Zectronix on Instagram for cybersecurity insights">
+                <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <circle cx="18" cy="6" r="1"></circle>
+                </svg>
+            </a>
+        </div>
+    </footer>
+    
+    <!-- JavaScript with Nonce -->
+    <script nonce="zectronix2025" src="js/main.js"></script>
+    
+    <!-- No JavaScript Fallback -->
+    <noscript>
+        <style>
+            .preloader { display: none; }
+            #hero, .privacy-policy { opacity: 1; visibility: visible; transform: none; }
+            .navbar-nav { display: flex; }
+            .animate-on-scroll { opacity: 1; transform: none; }
+        </style>
+        <p style="text-align: center; color: #555;">
+            JavaScript is disabled. Some features, like the particle background, may not work. Please enable JavaScript for the full experience.
+        </p>
+    </noscript>
+</body>
+</html>

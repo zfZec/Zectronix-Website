@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta and Security Headers -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=()">
+    <meta name="description" content="Contact Zectronix for expert cybersecurity solutions, including red teaming, penetration testing, and training.">
+    <meta name="author" content="Zectronix">
+    <!-- Static CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self'; style-src 'self'; script-src 'self' 'nonce-zectronix2025'; img-src 'self'; object-src 'none'; base-uri 'self'; connect-src 'self'; upgrade-insecure-requests;">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="media/icons/favicon.ico" type="image/x-icon">
+    
+    <!-- Local Fonts and Styles -->
+    <link rel="preload" href="css/fonts.css" as="style">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Zectronix - Contact Us</title>
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <span class="navbar-brand">Zectronix</span>
+            <div class="navbar-nav" id="navbar-nav" role="navigation">
+                <a class="nav-link" href="home.html" aria-label="Visit Home page">Home</a>
+                <a class="nav-link" href="home.html#services" aria-label="Explore our cybersecurity services">Services</a>
+                <a class="nav-link" href="about.html" aria-label="Learn more about Zectronix">About</a>
+                <a class="nav-link active" href="contact.html" aria-label="Contact our team">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container" role="main">
+        <div id="main-contact">
+            <div id="hero" class="animate-on-scroll">
+                <h1 class="hero-title">Contact Us</h1>
+                <p class="hero-subtitle">Get in Touch with Zectronix</p>
+            </div>
+            <section id="contact-intro" class="animate-on-scroll">
+                <div class="contact-intro">
+                    <h2 class="contact-intro-title">We're Here to Help</h2>
+                    <p class="contact-intro-text">At Zectronix, our team is dedicated to providing top-tier cybersecurity support. Whether you have questions about our services or need urgent assistance, we’re available 24/7 to ensure your security needs are met. Reach out today to learn how we can protect your digital assets.</p>
+                </div>
+            </section>
+            <section id="contact-info" class="animate-on-scroll">
+                <div class="contact-info" data-contact-id="contact-form" data-tooltip="Open contact form" aria-label="Open contact form" tabindex="0">
+                    <h2 class="contact-info-title">Get in Touch</h2>
+                    <p class="contact-info-summary">Our team is available 24/7 to respond to your needs, whether it's a routine inquiry or a critical emergency.</p>
+                    <div class="contact-info-items">
+                        <div class="contact-info-item">
+                            <img src="media/icons/service-icons/envelope-solid.svg" class="contact-info-icon" alt="" aria-hidden="true" loading="lazy">
+                            <h3>Email</h3>
+                            <a href="mailto:contact@zectronix.net">contact@zectronix.net</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="support-options" class="animate-on-scroll">
+                <div class="support-options">
+                    <h2 class="support-options-title">Support Options</h2>
+                    <p class="support-options-text">We strive to respond to all inquiries within 24 hours. For urgent matters, please indicate the priority in your message, and our team will prioritize your request. Learn more about our commitment to your privacy in our <a href="privacy.html" aria-label="View our Privacy Policy">Privacy Policy</a>.</p>
+                </div>
+            </section>
+            <div class="overlay" id="contact-overlay">
+                <div class="overlay-content">
+                    <div id="overlay-content-inner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-links">
+            <p>© 2025 - <a href="https://zectronix.net" aria-label="Visit Zectronix homepage">Zectronix</a></p>
+            <a href="privacy.html" class="footer-link" aria-label="View our Privacy Policy">Privacy Policy</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://x.com/zectronix" aria-label="Follow Zectronix on X for updates">
+                <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 6 6 18M6 6l12 12"></path>
+                </svg>
+            </a>
+            <a href="https://instagram.com/zectronix_cyber" aria-label="Follow Zectronix on Instagram for cybersecurity insights">
+                <svg xmlns="http://www.w3.org/2000/svg" class="feather" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <circle cx="18" cy="6" r="1"></circle>
+                </svg>
+            </a>
+        </div>
+    </footer>
+    
+    <!-- JavaScript with Nonce -->
+    <script nonce="zectronix2025" src="js/main.js"></script>
+    
+    <!-- No JavaScript Fallback -->
+    <noscript>
+        <style>
+            .preloader { display: none; }
+            #hero, .contact-info, .contact-intro, .support-options { opacity: 1; visibility: visible; transform: none; }
+            .navbar-nav { display: flex; }
+            .animate-on-scroll { opacity: 1; transform: none; }
+        </style>
+        <p style="text-align: center; color: #555;">
+            JavaScript is disabled. Some features, like the particle background, may not work. Please enable JavaScript for the full experience.
+        </p>
+    </noscript>
+</body>
+</html>
