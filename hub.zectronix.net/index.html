@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta Tags (security headers removed, handled by .htaccess) -->
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Zectronix Hub - Choose between expert IT solutions and cybersecurity services. Coming soon.">
     <meta name="author" content="Zectronix">
-    
+
     <!-- Open Graph and Twitter Card -->
     <meta property="og:title" content="Zectronix Hub - IT and Cybersecurity Services">
     <meta property="og:description" content="Zectronix Hub, coming soon to provide IT solutions and cybersecurity services.">
     <meta property="og:image" content="https://zectronix.net/images/og-image.jpg">
     <meta property="og:url" content="https://hub.zectronix.net/">
     <meta name="twitter:card" content="summary_large_image">
-    
+
     <!-- Favicon -->
     <link rel="icon" href="media/icons/favicon.ico" type="image/x-icon">
-    
+
     <!-- Local Fonts and Styles -->
     <link rel="preload" href="css/fonts.css" as="style">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    
+
     <title>Zectronix Hub - IT and Cybersecurity Services</title>
 </head>
 <body>
     <!-- Particle Canvas Background -->
     <canvas id="particle-canvas"></canvas>
-    
-    <!-- Accessibility Skip Link -->
-    <a href="#main-hub" class="skip-link" aria-label="Skip to main content">Skip to content</a>
-    
-    <!-- Preloader -->
+
+    <!-- Preloader with Intro Animation -->
     <div class="preloader">
         <div class="spinner"></div>
+        <div class="welcome-message">Welcome to Zectronix Hub</div>
     </div>
-    
+
     <!-- Main Content -->
     <div class="container" role="main">
         <div id="main-hub">
@@ -54,13 +52,6 @@
                         <noscript>Launching August 1st, 2025</noscript>
                     </div>
                 </section>
-                <!-- Service buttons for IT and Cybersecurity, removed per design update in favor of Coming Soon text -->
-                <!--
-                <section id="services">
-                    <a href="https://zectronix.net/it" class="service-cta" aria-label="Explore IT Solutions">IT Solutions</a>
-                    <a href="https://zectronix.net/cybersecurity" class="service-cta" aria-label="Explore Cybersecurity Services">Cybersecurity</a>
-                </section>
-                -->
                 <section id="teaser">
                     <p class="teaser-text">Empowering your digital future.</p>
                 </section>
@@ -81,7 +72,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Audio Controls -->
     <div class="audio-controls">
         <audio id="music" loop>
@@ -90,15 +81,15 @@
         </audio>
         <button id="audio-toggle" aria-label="Pause background music">Pause Music</button>
     </div>
-    
+
     <!-- Footer -->
     <footer id="footer">
         <p>© 2025 - <a href="https://zectronix.net" aria-label="Visit Zectronix homepage">Zectronix</a></p>
     </footer>
-    
-    <!-- JavaScript without Nonce (using hash-based CSP) -->
+
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
-    
+
     <!-- No JavaScript Fallback -->
     <noscript>
         <link rel="stylesheet" href="css/noscript.css">

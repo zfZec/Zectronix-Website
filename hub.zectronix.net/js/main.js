@@ -14,9 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             return;
         }
+
         const updateCountdown = () => {
             const now = new Date().getTime();
             const distance = target - now;
+
             if (distance < 0) {
                 clearInterval(countdown);
                 const countdownContainer = document.querySelector('.hub-countdown');
@@ -25,14 +27,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 return;
             }
+
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
             const daysElement = document.getElementById('days');
             const hoursElement = document.getElementById('hours');
             const minutesElement = document.getElementById('minutes');
             const secondsElement = document.getElementById('seconds');
+
             if (daysElement && hoursElement && minutesElement && secondsElement) {
                 daysElement.textContent = days.toString().padStart(2, '0');
                 hoursElement.textContent = hours.toString().padStart(2, '0');
@@ -43,53 +48,66 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(countdown);
             }
         };
-        // Set initial values immediately
+
         updateCountdown();
         const countdown = setInterval(updateCountdown, 1000);
     }
 
-    // Hide preloader
-    const hidePreloader = () => {
-        try {
-            if (hero) {
-                hero.style.visibility = 'visible';
-                hero.style.opacity = '1';
-                hero.classList.add('visible');
-            }
-            animateElements.forEach(element => {
-                element.style.visibility = 'visible';
-                element.style.opacity = '1';
-                element.classList.add('visible');
-                void element.offsetWidth; // Force repaint
-            });
-            requestAnimationFrame(() => {
-                preloader.classList.add('hidden');
-                preloader.style.display = 'none';
-                animateElements.forEach(element => {
-                    element.style.willChange = 'transform, opacity';
-                    setTimeout(() => element.style.willChange = 'auto', 100);
-                });
-            });
-        } catch (error) {
-            console.error('Error hiding preloader:', error.message);
-            preloader.classList.add('hidden');
-            preloader.style.display = 'none';
+// Show enhanced intro animation in the preloader
+const showIntroAnimation = () => {
+    if (!preloader) return;
+
+    let welcomeMessage = document.querySelector('.welcome-message');
+    if (!welcomeMessage) {
+        welcomeMessage = document.createElement('div');
+        welcomeMessage.className = 'welcome-message';
+        welcomeMessage.textContent = 'Welcome to Zectronix Hub';
+        preloader.appendChild(welcomeMessage);
+    }
+
+    // Add swirl-in and bounce animation classes
+    welcomeMessage.classList.add('swirl-in', 'bounce');
+
+    // Start animation sequence
+    setTimeout(() => {
+        preloader.classList.add('hidden');
+
+        if (welcomeMessage) {
+            preloader.removeChild(welcomeMessage);
         }
-    };
+
+        if (hero) {
+            hero.style.visibility = 'visible';
+            hero.classList.add('visible');
+        }
+        animateElements.forEach((element, index) => {
+            element.style.visibility = 'visible';
+            element.classList.add('visible');
+            void element.offsetWidth;
+
+            setTimeout(() => {
+                element.style.animation = `fadeInUp 0.8s ease-out forwards`;
+                if (index === 1) {
+                    element.style.animationDelay = '0.2s';
+                } else if (index === 2) {
+                    element.style.animationDelay = '0.4s';
+                }
+            }, index * 200);
+        });
+    }, 3000); // Extended duration to 3s for new animations
+};
+
 
     if (preloader) {
-        // Start countdown immediately
-        startCountdown('2025-08-01T00:00:00');
-        // Wait for fonts to load before hiding preloader
+        startCountdown('2025-10-01T00:00:00');
+
         if (document.fonts) {
-            document.fonts.ready.then(() => {
-                hidePreloader();
-            }).catch((error) => {
+            document.fonts.ready.then(showIntroAnimation).catch((error) => {
                 console.error('Font loading failed:', error.message);
-                hidePreloader(); // Fallback to hide preloader if font loading fails
+                showIntroAnimation();
             });
         } else {
-            hidePreloader(); // Fallback if FontFaceSet API is not supported
+            showIntroAnimation();
         }
     }
 });
@@ -102,10 +120,9 @@ window.onload = async () => {
         const toggle = document.getElementById('audio-toggle');
         const animateElements = document.querySelectorAll('.animate-on-scroll');
 
-        // Particle effects with optimizations
         if (canvas && ctx) {
             let particles = [];
-            const particleCount = 75; // Reduced from 100 to 50 for better performance
+            const particleCount = 75;
             let isAnimating = false;
 
             function initParticles() {
@@ -127,7 +144,7 @@ window.onload = async () => {
             }
 
             function animateParticles() {
-                if (document.hidden || !isAnimating) return; // Skip animation if hidden or not intersecting
+                if (document.hidden || !isAnimating) return;
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 particles.forEach(p => {
                     p.x += p.vx;
@@ -147,13 +164,13 @@ window.onload = async () => {
             canvas.classList.add('visible');
             isAnimating = true;
             animateParticles();
+
             window.addEventListener('resize', () => {
                 initParticles();
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
             });
 
-            // Pause/resume animation when canvas is out of view
             const observer = new IntersectionObserver((entries) => {
                 isAnimating = entries[0].isIntersecting;
                 if (isAnimating) animateParticles();
@@ -163,7 +180,6 @@ window.onload = async () => {
             console.warn('Canvas or context not found, skipping particle effects');
         }
 
-        // Scroll animations with IntersectionObserver
         try {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -179,7 +195,6 @@ window.onload = async () => {
 
             animateElements.forEach(element => observer.observe(element));
 
-            // Fallback to show elements if observer fails
             setTimeout(() => {
                 animateElements.forEach(el => {
                     if (!el.classList.contains('visible')) {
@@ -192,7 +207,6 @@ window.onload = async () => {
             animateElements.forEach(el => el.classList.add('visible'));
         }
 
-        // Audio Controls
         if (audio && toggle) {
             audio.volume = 0.01;
             document.body.addEventListener('click', () => {
@@ -213,7 +227,6 @@ window.onload = async () => {
             console.error('Audio or toggle element not found');
         }
 
-        // Log stylesheet errors
         document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
             link.addEventListener('error', () => {
                 console.error(`Stylesheet failed to load: ${link.href}`);
