@@ -1,10 +1,11 @@
 /* CSS Variables */
 :root {
     --zectronix-color: #b94bec;
+    --secondary-color: #02abde; /* Blue shade to complement purple */
     --unica: "Unica One", system-ui, sans-serif;
     --open-sans: "Open Sans", system-ui, sans-serif;
     --transition: 0.2s ease-in-out;
-    --footer-height: 100px;
+    --footer-height: 80px; /* Minimal footer */
 }
 
 /* Reset Styles */
@@ -46,7 +47,6 @@ body.overlay-open {
     display: block;
     pointer-events: none;
     visibility: hidden;
-    will-change: transform;
 }
 
 #particle-canvas[style*="visibility: visible"] {
@@ -94,11 +94,12 @@ body.overlay-open {
     left: 50%;
     transform: translateX(-50%);
     z-index: 999;
-    background: linear-gradient(135deg, rgba(185, 75, 236, 0.3), rgba(138, 43, 226, 0.3));
+    background: linear-gradient(135deg, rgba(185, 75, 236, 0.3), rgba(59, 130, 246, 0.3)); /* Increased opacity */
     backdrop-filter: blur(10px);
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(185, 75, 236, 0.4);
-    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    padding: 10px 20px;
     opacity: 1;
     transition: opacity var(--transition), visibility var(--transition), background var(--transition);
     max-width: 600px;
@@ -106,8 +107,8 @@ body.overlay-open {
 }
 
 .navbar:hover {
-    background: linear-gradient(135deg, rgba(185, 75, 236, 0.4), rgba(138, 43, 226, 0.4));
-    animation: navbarGlow 0.6s ease-in-out;
+    background: linear-gradient(135deg, rgba(185, 75, 236, 0.4), rgba(59, 130, 246, 0.4)); /* Stronger on hover */
+    animation: navbarGlow 0.8s ease-in-out;
 }
 
 .navbar.hidden {
@@ -272,7 +273,7 @@ body.overlay-open {
 
 .service:hover {
     border-color: var(--zectronix-color);
-    background: rgba(185, 75, 236, 0.15);
+    background: linear-gradient(135deg, rgba(185, 75, 236, 0.3), rgba(59, 130, 246, 0.3));
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     transform: translateY(-5px);
     animation: wiggle 0.4s ease-in-out forwards !important;
@@ -529,6 +530,7 @@ body.overlay-open {
     font: 400 14px var(--open-sans);
     color: #555;
     margin: 0;
+    padding-bottom: 3px;
 }
 
 .footer-link, #footer a {
@@ -565,7 +567,7 @@ body.overlay-open {
 
 .footer-social a:hover, .footer-social a:focus {
     color: var(--zectronix-color);
-    background: rgba(185, 75, 236, 0.1) !important;
+    background: linear-gradient(135deg, rgba(185, 75, 236, 0.3), rgba(59, 130, 246, 0.3)) !important;
     transform: scale(1.1);
     outline: none;
 }
